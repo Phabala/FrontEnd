@@ -1,0 +1,12 @@
+Java: 		Apache Tomcat + JSP 	--> 클라이언트(?)
+Node.js: 	Express + EJS 		--> 서버
+Python: 	Flask + Flask			
+React: 	Express + React		
+
+스크립트 언어 (인터프리터 언어) (파이썬, 자바스크립트, 베이직)
+- 실행과 동시에 우리가 작성한 코드 --> 기계어로 변환되며 실행
+- CPU
+
+컴파일러 언어
+- C, Java, ...
+- 번역(compile), 실행
