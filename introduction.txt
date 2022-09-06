@@ -10,3 +10,6 @@ React: 	Express + React
 컴파일러 언어
 - C, Java, ...
 - 번역(compile), 실행
+
+문서 작성과 디자인을 분리
+- 하나의 웹 문서에는 문서 html, 디자인 css
