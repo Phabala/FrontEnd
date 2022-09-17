@@ -59,11 +59,15 @@
             첫 번째 정수부터 두 번째 정수까지를 지수로 하는 2의 거듭제곱 배열을 
             출력하는 프로그램을 만드세요.<br> 
             단, 배열의 두 번째 요소와 뒤에서 두 번째 요소는 삭제한 뒤 출력하세요.</p>
+        <button id="Q1ShowBtn">보이기</button>
+        <button id="Q1HideBtn">숨기기</button>
         <hr>
-        <input type="number" id="first" placeholder="1~20 사이의 정수">
-        <input type="number" id="second" placeholder="10~30 사이의 정수">
-        <button onclick="answer1()">입력</button>
-        <p id="result1"></p>
+        <div id="Q1Input">
+            <input type="number" id="first" placeholder="1~20 사이의 정수">
+            <input type="number" id="second" placeholder="10~30 사이의 정수">
+            <button onclick="answer1()">입력</button>
+            <p id="result1"></p>
+        </div>
     </div>
     <div id="Q2" style="margin-top: 30px;">
         <h3>문제2</h3>
@@ -71,22 +75,54 @@
             문자열에서 'the'의 개수를 출력하는 프로그램을 만드세요.<br>
             단, 모든 문자가 소문자인 'the'만 찾으면 되며 
             'them', 'there', 'their' 등은 포함하지 않아야 합니다.</p>
+        <button id="Q2ShowBtn">보이기</button>
+        <button id="Q2HideBtn">숨기기</button>
         <hr>
-        <textarea id="text" cols="100" rows="10"></textarea>
-        <button onclick="answer2()">입력</button>
-        <p id="result2"></p>
+        <div id="Q2Input">
+            <textarea id="text" cols="100" rows="10"></textarea>
+            <button onclick="answer2()">입력</button>
+            <p id="result2"></p>
+        </div>
     </div>
     <div id="Q3" style="margin-top: 30px;">
         <h3>문제3</h3>
         <p>10보다 큰 정수 두개를 입력으로 받습니다.<br>
             두 숫자의 공약수를 세트 형태로 구하도록 프로그램을 작성하세요.</p>
-            <hr>
-        <input type="number" id="num1" placeholder="10보다 큰 정수">
-        <input type="number" id="num2" placeholder="10보다 큰 정수">
-        <button onclick="answer3()">입력</button>
-        <p id="result3"></p>
+        <button id="Q3ShowBtn">보이기</button>
+        <button id="Q3HideBtn">숨기기</button>
+        <hr>
+        <div id="Q3Input">
+            <input type="number" id="num1" placeholder="10보다 큰 정수">
+            <input type="number" id="num2" placeholder="10보다 큰 정수">
+            <button onclick="answer3()">입력</button>
+            <p id="result3"></p>
+        </div>
     </div>
     <script>
+        $('#Q1ShowBtn').click(function() {
+            $("#Q1Input").show(); 
+        })
+
+        $('#Q1HideBtn').click(function() {
+            $("#Q1Input").hide();
+        })
+
+        $('#Q2ShowBtn').click(function() {
+            $("#Q2Input").show(); 
+        })
+
+        $('#Q2HideBtn').click(function() {
+            $("#Q2Input").hide();
+        })
+
+        $('#Q3ShowBtn').click(function() {
+            $("#Q3Input").show(); 
+        })
+
+        $('#Q3HideBtn').click(function() {
+            $("#Q3Input").hide();
+        })
+        
         let count = 3;
         const show = document.getElementById('show');
         function disp(num) {
