@@ -124,8 +124,15 @@
         })
         
         let count = 3;
-        const show = document.getElementById('show');
+        const show = $('#show');
         function disp(num) {
+            $('<img></img>')
+                .attr('src', './digits/'+num+'.svg')
+                .attr('width', '800')
+                .attr('id') // , 'second' 없앰 => 얘는 어떻게 추가하는건지 못적음.
+                .css({marginTop:'30px', marginBottom:'200px', marginLeft:'200px'})
+                .appendTo(show)
+            /*
             const img = document.createElement('img');
             img.setAttribute('src', './digits/'+num+'.svg');
             img.setAttribute('width', '800');
@@ -134,10 +141,12 @@
             img.style.marginBottom = '200px';
             img.style.marginLeft = '200px';
             show.appendChild(img);
+            */
         }
         function hide() {
-            const sec = document.getElementById('second');
-            show.removeChild(sec);
+            // const sec = $('#second');
+            // show.removeChild(sec);
+            show.children().remove();
         }
         function countDown() {
             disp(count--);
@@ -150,7 +159,7 @@
                 clearInterval(interval);
             }, 3000);
         }
-        window.onload = countDown;
+        // window.onload = countDown;
     </script>
 </body>
 </html>
