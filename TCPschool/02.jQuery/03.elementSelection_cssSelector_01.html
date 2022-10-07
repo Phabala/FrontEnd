@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Element Selection</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function() {
+            // getElementsByTagName()
+            $("p").on("click", function() { // <p> 요소를 모두 선택함.
+                $("span").css("fontSize", "28px")
+                $("span").css("color", "magenta"); // <span> 요소를 모두 선택함.
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>HTML 태그 선택자</h1>
+    <p>이제부터 <span>제이쿼리</span>를 다 같이 공부해보죠!!<br>
+    마우스로 글씨를 클릭해보세요!!</p>
+</body>
+</html>

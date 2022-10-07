@@ -1,0 +1,14 @@
+{
+  "name": "npm_gh",
+  "version": "1.0.0",
+  "description": "Any Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"안녕하세요\""
+  },
+  "keywords": [
+    "npm_gh"
+  ],
+  "author": "gh",
+  "license": "ISC"
+}

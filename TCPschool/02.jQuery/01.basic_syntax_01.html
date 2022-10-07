@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        function func() {
+            createElement(); //  id가 para인 HTML 요소를 생성함.
+            addAttribute(); // id가 para인 HTML 요소에 속성을 추가함.
+        }
+        function createElement() {
+            var criteriaNode = document.getElementById("text");
+            var newNode = document.createElement("p")
+            newNode.innerHTML = "새로운 단락입니다.";
+            document.body.insertBefore(newNode, criteriaNode);
+        }
+        function addAttribute() {
+            document.getElementById("para").setAttribute("style", "color: red");
+        }
+    </script>
+</head>
+<body>
+    <h1>아직 생성되지 않은 HTML 요소에 속성 추가</h1>
+    
+    <button onclick="func()">속성 추가!</button>
+    <p id="text"></p>
+</body>
+</html>

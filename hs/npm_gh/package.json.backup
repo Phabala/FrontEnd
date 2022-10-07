@@ -1,0 +1,11 @@
+{
+    "name" : "npm_gh",
+    "description" : "my package for test",
+    "version" : "0.0.1",
+    "main" : "index.js",
+    "scripts" : {
+        "test" : "echo"
+    },
+    "license" : "MIT",
+    "author" : {}
+}
