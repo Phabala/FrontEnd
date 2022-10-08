@@ -1,2 +1,2 @@
 # FrontEnd
-김철기쌤 9월 초 FrontEnd
+AI사관학교 FrontEnd 수업
