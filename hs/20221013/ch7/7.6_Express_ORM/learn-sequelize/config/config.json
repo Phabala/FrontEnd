@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": "nodejsbook",
+    "username": "gisuser",
+    "password": "gispass",
     "database": "nodejs",
     "host": "127.0.0.1",
     "dialect": "mysql"

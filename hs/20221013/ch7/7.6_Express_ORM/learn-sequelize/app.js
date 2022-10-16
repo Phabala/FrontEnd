@@ -3,7 +3,7 @@ const path = require('path');
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
 
-const { sequelize } = require('./models');
+const { sequelize } = require('./models'); // ./models 로만 있으면 일반적으로 index.js 와 연결된다. 
 const indexRouter = require('./routes');
 const usersRouter = require('./routes/users');
 const commentsRouter = require('./routes/comments');
