@@ -1,0 +1,20 @@
+config: 설정
+public: 스태틱파일 (잘 안변함)
+router: 라우터
+views: public 과 반대 개념 (동적 파일)
+--> 여기까지가 기본적인 구성
+sequelize를 사용한다면 models 까지 쓴다.
+
+pm2 명령어:
+
+pm2 start [서버파일명] -- watch
+    서버 실행 * --watch 옵션
+
+pm2 kill
+    전체서버 파일 중지
+
+get방식: URL (쿼리 스트링)
+    보안x, 데이터크기 제한 but 간편
+
+post방식: packet 의 body 안에 데이터를 담아서 보냄. (Header와 body로 나뉘는게 패킷)
+    보안O, 데이터크기 제한 X
