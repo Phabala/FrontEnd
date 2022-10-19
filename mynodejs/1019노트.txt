@@ -1,0 +1,5 @@
+MVC
+
+html = View
+Control = /Login
+Model = 어디더라 app.js 였나?
