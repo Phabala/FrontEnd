@@ -1,0 +1,16 @@
+ejs로 렌더링 페이지를 만들 때
+
+router 폴더 안의 router 파일 안의 router 미들웨어에서
+views 파일 안의 ejs 파일 안의 ejs 구문이 그 값을 받는다.
+
+미들웨어:
+response.render('ejs_파일이름', {
+                ejs에_넘겨줄_key이름 : 미들웨어에서_받고_있는_value
+            });
+
+ejs파일:
+<!DOCTYPE html>
+< ... >
+    <% 자바스크립트 문법 %>
+    <%= render에서 받는 key %>
+< ... >
