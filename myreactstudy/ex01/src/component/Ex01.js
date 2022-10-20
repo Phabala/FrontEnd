@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Ex01(props) {
     console.log(props)
     return (

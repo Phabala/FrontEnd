@@ -1,4 +1,6 @@
 import {useState} from 'react'
+import React from 'react';
+
 // useState : 리액트에서 기본적으로 제공하는 기능(Hooks) --> 상태값을 만들 수 있는 기능을 제공
 // 상태값 : 화면이 보인 후에도 값이 바뀌면 화면도 바뀔 수 있는 값
 
