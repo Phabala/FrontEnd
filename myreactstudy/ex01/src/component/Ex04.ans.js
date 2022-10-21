@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
 function Ex04(){
     // const [inputId, setInputId] = useState('');
     // const [inputPw, setInputPw] = useState('');
