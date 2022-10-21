@@ -122,4 +122,8 @@ router.post("/Join", (request, response) => {
     response.end();
 });
 
+router.get("/Message", (request, response) => {
+    response.render("message", {});
+});
+
 module.exports = router; // router를 외부(app.js)에서 사용할 수 있게 만듦

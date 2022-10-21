@@ -13,7 +13,7 @@ DBrouter.post("/JoinDB", (request, response) => {
     // 두가지 매개변수: sql --> sql 문에 어떤 명령어를 넣을건지, (err, row) --> 실패했을 때와 성공했을 때의 값
         if(!err) { // err에 값이 안 들어있다면 (성공했다면)
             console.log("입력 성공 : " + row);
-            response.redirect("http://127.0.0.1:5500/mynodejs/public/ex06Main.html");
+            response.redirect("http://127.0.0.1:3000/Main");
         } else {
             console.log("입력 실패 : " + err);
         }
@@ -32,7 +32,7 @@ DBrouter.get("/Delete", (request, response) => {
             console.log("삭제된 값이 없습니다.");
         } else { // 이거 좀 이상한거같은데
             console.log("명령에 성공한 수 : " + row.affectedRows); // sql문은 syntax error 가 없기 때문에 삭제될 값이 없어도 삭제 성공이 나온다.
-            response.redirect("http://127.0.0.1:5500/mynodejs/public/ex06Main.html");
+            response.redirect("http://127.0.0.1:3000/Main");
         }
     })
 });
@@ -54,7 +54,7 @@ DBrouter.post("/Update", (request, response) => {
             console.log("변경된 값이 없습니다.");
         } else {
             console.log("변경에 성공한 수 : " + row.affectedRows);
-            response.redirect("http://127.0.0.1:5500/mynodejs/public/ex06Main.html")
+            response.redirect("http://127.0.0.1:3000/Main")
         }
     });
 
@@ -65,7 +65,7 @@ DBrouter.post("/Update", (request, response) => {
     //         console.log("삭제된 값이 없습니다.");
     //     } else {
     //         console.log("명령에 성공한 수 : " + row.affectedRows); // sql문은 syntax error 가 없기 때문에 삭제될 값이 없어도 삭제 성공이 나온다.
-    //         response.redirect("http://127.0.0.1:5500/mynodejs/public/ex06Main.html");
+    //         response.redirect("http://127.0.0.1:5500/public/ex06Main.html");
     //     }
     // })
 });
@@ -199,16 +199,35 @@ DBrouter.post("/Login", (request, response) => {
             console.log("검색 실패(Syntax Error) : " + err)
         } else if (row.length > 0) {
             // response.redirect("http://127.0.0.1:5500/mynodejs/public/ex05loginS.html")
+            
+            request.session.user = id;
+
+            console.log("session 영역에 id 저장 성공" + request.session.user);
+            
             response.render('LoginS', {
-                id : row[0].id
+                id_name : id
             });
             console.log("로그인 성공")
         } else {
-            response.redirect("http://127.0.0.1:5500/mynodejs/public/ex05loginF.html")
+            response.redirect("http://127.0.0.1:5500/public/ex05loginF.html")
             console.log("로그인 실패")
         }
     })
 
 });
+
+DBrouter.get("/Main", (request, response) => { // ejs는 단독으로 있을 수 없으며, 이렇게 라우터가 있어야 한다.
+    response.render("Main", {
+        id : request.session.user // 이 Main 라우터에서 Main.ejs 로 request.session.id 를 id로 보내준다.
+    });
+});
+
+DBrouter.get("/Logout", (request, response) => {
+    delete request.session.user;
+
+    response.render("Main", {
+        id : request.session.user
+    })
+})
 
 module.exports = DBrouter;
