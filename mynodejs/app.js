@@ -5,6 +5,7 @@ const router = require("./router/router.js");
 const DBrouter = require("./router/DBrouter");
 const EJSrouter = require("./router/EJSrouter");
 const Sessionrouter = require("./router/SessionRouter");
+const Messagerouter = require("./router/Messagerouter");
 
 const bodyparser = require("body-parser");
 let ejs = require("ejs");
@@ -42,4 +43,5 @@ app.use(router); // 미들웨어로 라우터 등록
 app.use(DBrouter);
 app.use(EJSrouter);
 app.use(Sessionrouter);
+app.use(Messagerouter);
 app.listen(3000); // 현재 서버파일의 port 번호 설정
