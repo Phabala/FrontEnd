@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
-import {useLocation} from "react-router-dom";
+import React, {useState, useEffect} from 'react';
+import {useLocation, useNavigate} from "react-router-dom";
 
 function Login() {
+    const nav = useNavigate();
     const location = useLocation();
     const user = location.state.user;
     const [loginInput, setLoginInput] = useState({
@@ -11,6 +12,17 @@ function Login() {
 
     const [loginState, setLoginState] = useState(0);
     const [clickButton, setClickButton] = useState(0);
+
+    function goHome() {
+            nav("../Home", {state:{user:user}})
+    }
+
+    useEffect(() => {
+        if (loginState === 1 && clickButton === 1) {
+            goHome();
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [loginState, clickButton])
 
     function ckState(e) {
         if (user.ID === loginInput.id && user.PW === loginInput.pw) {
@@ -49,7 +61,8 @@ function Login() {
             <p>{loginInput.id} {loginInput.pw}</p>
             <p>clickButton : {clickButton}</p>
             {(clickButton) && (loginState === 1 ? <h2>로그인 성공</h2> : <h2>로그인 실패</h2>)}
-            {/* 아 이거 어떻게 하더라, 버튼 누를 때만 h2 태그 나오는거 */}
+            {goHome}
+            {/* 아 이거 어떻게 하더라, 버튼 누를 때만 h2 태그 나오는거 , 왜 되지*/}
         </>
     )
 }

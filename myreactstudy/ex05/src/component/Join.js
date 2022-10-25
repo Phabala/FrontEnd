@@ -17,7 +17,7 @@ function Join() {
 
     /*
     function tryJoin() {
-        nav("/Login");
+        nav("/Login?id="+id+"&pw="+pw+"&nick="+nick);
     }
     */
 
@@ -31,9 +31,12 @@ function Join() {
         useId.current.focus();
     };
 
+    
+
     return (
         <>
             <h1>회원가입 페이지 입니다</h1>
+            <form action="/Login">
             ID: <input 
                 type="text"
                 name="ID"
@@ -55,10 +58,12 @@ function Join() {
                 value={NICK}
                 onChange={onChangeInput}/>
             <br/>
-
-            <button onClick={()=>{navigate("./Login", {state:{user:user}})}}>Join</button><button onClick={onReset}>초기화</button>
+            <button onClick={()=>{navigate("./Login", {state:{user:user}})}}>Join</button><button onClick={onReset} type="button">초기화</button>
+            </form>
             {/* 초기화 버튼 누르면 input 안의 값들 사라지게 하고, 포커스가 ID에 맞춰지게 하기 */}
             {/* <button onClick={tryJoin}>Join</button> */}
+            {/* form 태그 안에 있는 버튼은 기본적으로 submit, 그래서 form 태그 밖에 빼주거나 type을 "button"으로 해준다. (form 태그 안의 type 기본값: submit) */}
+            {/* submit 하면 기본적으로 쿼리로 들어가네? */}
         </>
     )
 }
