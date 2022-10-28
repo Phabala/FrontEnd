@@ -1,0 +1,2 @@
+npm run build : 배포모드, 최종적으로 배포할 때 진행하는 작업
+npm start : 개발모드
