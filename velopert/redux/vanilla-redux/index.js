@@ -1,3 +1,5 @@
+import {createStore} from 'redux';
+
 // 16.2.3 DOM 레퍼런스 (이번 프로젝트에서만 이렇게 한다. UI 관리할 때 별도의 라이브러리를 사용하지 않기 때문.)
 const divToggle = document.querySelector('.toggle');
 const counter = document.querySelector('h1');
@@ -18,3 +20,44 @@ const DECREASE = 'DECREASE';
 const toggleSwitch = () => ({type : TOGGLE_SWITCH});
 const increase = difference => ({type : INCREASE, difference});
 const decrease = () => ({type : DECREASE});
+
+const initialState = {
+    toggle : false,
+    counter : 0
+};
+
+// 리듀서 함수 정의: 리듀서는 변화를 일으키는 함수다. 함수의 파라미터로는 state와 action값을 받아온다.
+
+// state가 undefined일 때는 initialState를 기본값으로 사용
+function reducer(state = initialState, action) { // 리듀서 함수가 맨 처음 호출될 때는 state값이 undefined다. 초기화됐을 때 undefined를 방지하기 위해 함수의 파라미터에 기본값이 설정되어 있음.
+    // action.type에 따라 다른 작업을 처리함
+    switch (action.type) {
+        case TOGGLE_SWITCH:
+            return {
+                ...state, // 불변성을 유지해주어야 한다. --> 왜? 불변성을 떠나서, 이건 왜 return 해줘야하지? 애초에 불변성이 뭘까
+                toggle: !state.toggle // 
+            };
+        case INCREASE:
+            return {
+                ...state,
+                counter: state.counter + action.difference
+            };
+        case DECREASE:
+            return {
+                ...state,
+                counter: state.counter - 1
+            };
+        default:
+            return state;
+    }
+}
+
+const store = createStore(reducer);
+
+const render = () => {
+    const state = store.getState();
+
+    if (state.toggle) {
+        divToggle.classList.add('active');
+    }
+}
