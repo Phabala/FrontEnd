@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>선호도 조사 시스템</h1>
+    <hr>
+    <form action="http://127.0.0.1:3000/ex01" method="get">
+        <table border="1">
+            <!-- 엠엣 기능? 이름이 뭐지 -->
+            <tr>
+                <td><label for="name">이름</label></td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td><label for="season">가장 좋아하는 계절</label></td>
+                <td>
+                    <!-- 아, 라디오가 중복이 안되고 체크박스는 중복이 되는구나 -->
+                    <input type="radio" name="season" value="봄">봄
+                    <input type="radio" name="season" value="여름">여름
+                    <input type="radio" name="season" value="가을">가을
+                    <input type="radio" name="season" value="겨울">겨울
+                </td>                
+            </tr>
+            <tr>
+                <!-- colspan : 병합할 칸 수 -->
+                <td colspan="2"><input type="submit" value="확인"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
