@@ -1,7 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
+import {useSelector} from 'react-redux';
 
 function Login() {
+    const joinId = useSelector((state)=>state.id); // 괄호 안의 state : 컴포넌트에서 공유되고 있는 store 안의 객체를 가져오라는 말(store 객체를 의미한다.)
+    const joinPw = useSelector((state)=>state.pw);
+    const joinNick = useSelector((state)=>state.nick);
+
     const nav = useNavigate();
     const location = useLocation();
     const user = location.state.user;
@@ -41,9 +46,18 @@ function Login() {
         setLoginInput({ ...loginInput, [name]: value });
     }
 
+    function tryLogin() {
+        if(joinId == loginInput.id && joinPw == loginInput.pw) {
+            console.log("성공")
+            nav("Home>nick="+joinNick)
+        } else {
+            console.log("실패")
+        }
+    }
     return (
         <>
             <h1>Login 페이지</h1>
+            <form action = "/Home">
             ID: <input
                 type="text"
                 name="id"
@@ -63,6 +77,7 @@ function Login() {
             {(clickButton) && (loginState === 1 ? <h2>로그인 성공</h2> : <h2>로그인 실패</h2>)}
             {goHome}
             {/* 아 이거 어떻게 하더라, 버튼 누를 때만 h2 태그 나오는거 , 왜 되지*/}
+            </form>
         </>
     )
 }

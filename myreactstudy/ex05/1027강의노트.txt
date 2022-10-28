@@ -1,0 +1,11 @@
+npm install redux
+npm install react-redux
+
+구현할 것:
+1. store
+2. reducer
+3. provider
+
+// Join이라는 버튼 클릭시 입력한 id, pw, nick 값으로 공유되고 있는 state값 초기화
+// Login 컴포넌트로 이동
+// 이동 후 공유되고 있는 state값을 가져와서 Login 시도

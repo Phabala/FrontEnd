@@ -1,9 +1,14 @@
 import React, {useState, useRef} from 'react';
 import {useNavigate} from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
+import { applyMiddleware } from 'redux';
 // useRef : 컴포넌트 안의 특정DOM(요소) 선택을 도와주는 기능
 // useNavigate : 특정 주소값으로 화면을 전활 할 수 있는 역할
 
 function Join() {
+
+    const test = useSelector((state)=>state.id);
+    const dispatch = useDispatch();
 
     const navigate = useNavigate();
     const useId = useRef();
@@ -12,6 +17,8 @@ function Join() {
         PW: "",
         NICK : ""
     });
+
+    // action에 있는 값을 (message)를 가져와서 State 변경 로직
 
     const {ID, PW, NICK} = user; // 굳이 객체 비구조화 할당을 써야할까? user = user 하면 안되나?
 
@@ -31,12 +38,22 @@ function Join() {
         useId.current.focus();
     };
 
+    function tryJoin() {
+        dispatch({
+            type:'join',
+            id:ID,
+            pw:PW,
+            nick:NICK
+        });
+        navigate("/Login");
+    };
+
     
 
     return (
         <>
             <h1>회원가입 페이지 입니다</h1>
-            <form action="/Login">
+            <form action="/Login" method='post'>
             ID: <input 
                 type="text"
                 name="ID"
@@ -58,6 +75,12 @@ function Join() {
                 value={NICK}
                 onChange={onChangeInput}/>
             <br/>
+            <button onClick={dispatch({
+                type:'join',
+                id : ID,
+                pw : PW,
+                nick : NICK
+            })} type="button">Join</button> {/* submit이 아니라 button 타입이어야 한다. submit 이면 form으로 보내기 때문. */}
             <button onClick={()=>{navigate("./Login", {state:{user:user}})}}>Join</button><button onClick={onReset} type="button">초기화</button>
             </form>
             {/* 초기화 버튼 누르면 input 안의 값들 사라지게 하고, 포커스가 ID에 맞춰지게 하기 */}
