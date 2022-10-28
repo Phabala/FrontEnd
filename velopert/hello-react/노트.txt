@@ -1,0 +1,1 @@
+props 가 properties 의 약자였구나
