@@ -1,0 +1,117 @@
+영표쌤 UI/UX 강의
+
+1. 글씨체
+2. 색상
+3. 도형과 여백
+4. 사진과 영상
+
+~28:50 카카오오븐 개요 및 기획팀이 할 일(화면설계서)
+~60:00 디자인 영역 (CSS, 미리캔버스, 폰트, 색상, 아이콘 및 이미지, 사진 동영상, 디자인 참고 사이트, 리액트 부트스트랩)
+
+리액트 쓰면 CSS 디자인 사이트로 React-Bootstrap 많이 쓸거다
+
+
+
+# 디자인
+
+제가 직접 정리한 PPT, 홈페이지, 앱 등 공통적으로 디자인할 때 필요한 점과 사이트를 정리한 내용입니다, 프로젝트 시 활용하시면 매우 좋습니다, 실무에서 활용하시는 분들도 계십니다!
+
+<1. 글씨체/폰트>
+무료폰트 다운로드 사이트
+
+- 한글(눈누) [noonnu.cc](http://noonnu.cc/)
+- 영어(다폰트) [www.dafont.com](http://www.dafont.com/)
+
+프로젝트 시 저작권은 생각하지 않아도됨, 다만 공모전, 블로그/SNS 업로드 등이 이루어질 경우 꼭 저작관 확인하셔야합니다!
+
+눈누사이트는 모든폰트 메뉴클릭해서 사용하시고 필터에서 허용범위 모두 체크하고 사용하면 저작권 안심하고 쓰실 수 있고
+
+다폰트는 다운로드 버튼 위에 100% Free만 상업적으로 사용 가능합니다
+
+---
+
+<2. 색상추천(전체테마, PPT메인색상 등)>
+[https://flatuicolors.com/](https://flatuicolors.com/)
+트렌드에 맞는 UI컬러 팔레트
+
+[https://coolors.co/gradients](https://coolors.co/gradients)
+트렌드 컬러 팔레트와 그라데이션 색상추천
+
+[https://material.io/design/color/the-color-system.html#tools-for-picking-colors](https://material.io/design/color/the-color-system.html#tools-for-picking-colors)
+구글 공식 UI 컬러팔레트 리스트
+(좀 내려야 있어요)
+
+[https://webgradients.com/](https://webgradients.com/)
+그라데이션 색상 추천
+
+색상을 쓰실때 진한색(어두운색이아님)을 바탕색으로 쓰시고 그 위에 흰색이나 밝은색 글씨나 아이콘 등 디자인요소를 넣어야 예쁘게 나옵니다
+
+색상선택하실 때 참고해주세요!
+
+---
+
+<3. 아이콘/이미지소스>
+[https://thenounproject.com/](https://thenounproject.com/)
+컨셉맞추기 쉬운 무료 아이콘 다운로드
+
+[https://www.flaticon.com/](https://www.flaticon.com/)
+다양한 컨셉의 무료 아이콘 다운로드
+
+[https://www.freepik.com/](https://www.freepik.com/)
+무료 디자인소스 다운로드 (상업적이용불가)
+*일러스트/포토샵 기본정도 아는사람 사용추천
+
+아이콘을 사용하실 때 한페이지 안에 비슷한 컨셉으로 아이콘을 여러개 넣으실땐 위에있는 사이트가 편리하고 한두개씩 좀 예쁘게 넣기에는 아래 사이트가 좋을꺼에요
+
+위 두개 사이트 아이콘 무료로 사용할때는 출처를 작게 사이트하단에 표시하면 좋습니다
+
+---
+
+<4. 사진/동영상>
+[https://pixabay.com/](https://pixabay.com/)
+사진데이터가 가장많은 무료사진 사이트
+
+[https://unsplash.com/](https://unsplash.com/)
+다운로드가 가장편한 무료사진 사이트
+(원하는 사진 마우스오버 후 다운로드 버튼 클릭 시 바로다운로드)
+
+[https://pexels.com/](https://pexels.com/)
+무료 동영상 다운로드 사이트
+
+사진은 가장 강력한 디자인 무기입니다
+사용하실때 가로 크기가 1920px 이상 사진을 사용하셔야해요 보통 PC 모니터해상도의 가로가 1920px이기 때문입니다 (해상도가 낮은 사진(1920px)보다 낮은사진을 사용하면 흐리거나 깨져보입니다)
+
+---
+
+<5. 디자인 참고사이트>
+홈페이지 디자인 참고사이트
+[https://www.gdweb.co.kr/main/](https://www.gdweb.co.kr/main/)
+국내 홈페이지, 앱 디자인 스크린샷 가장많이 모아놓은 곳
+
+[https://getbootstrap.com/](https://getbootstrap.com/)[https://startbootstrap.com/](https://startbootstrap.com/)
+부트스트랩 UI보기 뛰어난곳
+
+[https://www.miricanvas.com/](https://www.miricanvas.com/)
+PPT 만들기 어려울때, 미리캔버스로 쉽게!
+
+[https://m.blog.naver.com/PostList.naver?blogId=seiru523](https://m.blog.naver.com/PostList.naver?blogId=seiru523) – 새별 블로그
+PPT 디자인 강좌, 색상별 / 디자인 별 무료 템플릿 무료 제공
+
+[https://blog.naver.com/PostList.naver?blogId=hun1188](https://blog.naver.com/PostList.naver?blogId=hun1188) – EZ세상 블로그
+PPT 디자인 강좌, 고퀄리티 PPT 템플릿 무료 제공
+
+[blog.naver.com/baesyaesy](http://blog.naver.com/baesyaesy) – 캐논남 템플릿
+심플하고 정갈한 무료 PPT 템플릿 무료 제공
+
+[hangeul.naver.com/2014/document](http://hangeul.naver.com/2014/document) – 네이버 템플릿
+네이버에서 제공하는 고퀄리티 PPT 및 이력서, 한글, 엑셀 등 유용한 무료 템플릿
+
+Bootstrap Footer 
+
+[https://datamoney.tistory.com/149](https://datamoney.tistory.com/149)
+
+Bootstrap 사용법 
+
+[https://datamoney.tistory.com/149](https://datamoney.tistory.com/149)
+
+영표쌤 노션 링크 : https://seonzeroticket.notion.site/5e0e8a9558fe462487dcbbf2aeb1090b
