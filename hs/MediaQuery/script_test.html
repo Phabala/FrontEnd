@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 밑의 jquery 를 불러주는 src script 가 없으면 $("p").text() 가 동작하지 않는다. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- 위의 script 태그는 라이브러리를 가져온다는 점에서 파이썬에서 다음과 비슷하겠다.(웹에서 라이브러리를 불러온다와 로컬에서 불러온다는 것에서 차이는 있지만) -->
+    <!-- import jquery as $ -->
+    <script src="./test.js"></script>
+    <script>
+        console.log(1)
+    </script>
+</head>
+<body>
+    <script>console.log(2)</script>
+    <p>Here is tag of P</p>
+    <script>
+        console.log(3)
+    </script>
+</body>
+</html>
